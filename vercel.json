@@ -1,11 +1,18 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "experimentalServices": {
+    "frontend": {
+      "routePrefix": "/",
+      "framework": "vite"
+    },
+    "backend": {
+      "entrypoint": "backend",
+      "routePrefix": "/_/backend"
+    }
+  },
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index" },
-    { "source": "/docs", "destination": "/api/index" },
-    { "source": "/redoc", "destination": "/api/index" },
-    { "source": "/openapi.json", "destination": "/api/index" },
+    { "source": "/api/(.*)", "destination": "/_/backend/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
