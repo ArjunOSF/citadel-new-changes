@@ -1,0 +1,9 @@
+fastapi>=0.115.0,<0.120
+starlette>=0.40.0,<0.42
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+openpyxl==3.1.5
+pydantic==2.9.2
+# Invoice-PDF extraction uses the Claude Agent SDK, which talks to the `claude`
+# CLI as a subprocess. The CLI provides subscription-based auth (no API key).
+claude-agent-sdk>=0.1.60

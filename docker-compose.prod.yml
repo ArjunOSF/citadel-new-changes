@@ -1,0 +1,21 @@
+# Production compose — no source bind-mounts, no hot-reload.
+# Usage: docker compose -f docker-compose.prod.yml up -d --build
+
+version: "3.8"
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - CORS_ORIGINS=${CORS_ORIGINS}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}   # optional — only needed for PDF invoice extraction
+    volumes:
+      - recon_data:/data
+      - uploads_data:/app/uploads
+    restart: unless-stopped
+
+volumes:
+  recon_data:
+  uploads_data:

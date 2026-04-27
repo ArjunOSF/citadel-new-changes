@@ -1,0 +1,6 @@
+Entity,Entity Code,Account,Description,Template,Preparer,Approver,GL Balance,Currency,Threshold %,Threshold Amount
+Citadel US,CIT-US,1010-001,Prepaid Insurance,Amortizable,kim,edith,24000.00,USD,1,50
+Citadel US,CIT-US,1020-100,AR Trade,Schedule List,kim,edith,185500.00,USD,0.5,100
+Citadel US,CIT-US,2110-001,Accrued Interest,Accrual,kim,edith,3200.50,USD,2,25
+Citadel EU,CIT-EU,4010-200,Miscellaneous Revenue,General List,kim,edith,9850.75,EUR,1,10
+Citadel APAC,CIT-AP,1500-010,Deferred Rent,Amortizable,kim,edith,12500.00,USD,1,50
